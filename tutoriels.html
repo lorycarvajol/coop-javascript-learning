@@ -18,7 +18,7 @@
 <body>
 
     <!-- NAVBAR : en-tête de navigation responsive -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4 fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -27,23 +27,32 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="tutoriels.html">Jeux & Exercices</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="references.html">Références</a></li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="test.html">Manip variable</a>
+                    <li class="nav-item"><a class="nav-link " href="references.html">Références</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Manip variable
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="test.html">Manip variable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="exo_manip.html"> exo Manip variable</a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="doc_manip.html">doc Manip variable</a>
+                            </li>
+                            </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="exo_manip.html"> exo Manip variable</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="doc_manip.html">doc Manip variable</a>
-                    </li>
-                </ul>
-                </div>
-                </div>
-                </nav>
-
+                    </ul>
+            </div>
+            </div>
+            </nav>
     <!-- HERO : bannière d’introduction -->
     <header class="container-fluid px-4 mb-5">
         <div class="hero text-center p-5 rounded bg-purple-dark text-white">
@@ -90,7 +99,7 @@ test();</code></pre>
                         <!-- Zone de saisie de la réponse -->
                         <div class="mb-3">
                             <label for="answer1" class="form-label">Votre réponse :</label>
-                            <input type="text" id="answer1" class="form-control" placeholder="ex : 1,ReferenceError">
+                            <input type="text" id="answer1" class="form-control">
                         </div>
                         <!-- Boutons d’action -->
                         <div class="d-flex gap-2">
@@ -105,8 +114,8 @@ test();</code></pre>
                             2 → <strong>ReferenceError</strong> (y non défini hors du bloc)
                         </div>
                     </div>
-                    </div>
-                    </section>
+                </div>
+                </section>
 
             <!-- Exercice 2 : réaffectation const -->
             <section class="col-12 col-lg-6">
@@ -123,7 +132,7 @@ test();</code></pre>
 // À compléter ici :</code></pre>
                         <div class="mb-3">
                             <label for="answer2" class="form-label">Votre ligne de réaffectation :</label>
-                            <input type="text" id="answer2" class="form-control" placeholder="ex : MY_POTION = 'mana';">
+                            <input type="text" id="answer2" class="form-control" placeholder="">
                         </div>
                         <div class="d-flex gap-2">
                             <button id="check2" class="btn btn-purple">Vérifier</button>
@@ -135,9 +144,9 @@ test();</code></pre>
                             <code>MY_POTION = 'mana';</code><br>
                             → TypeError : assignment to constant variable.
                         </div>
-                        </div>
-                        </div>
-                        </section>
+                    </div>
+                    </div>
+                    </section>
 
             <!-- Exercice 3 : styles de fonctions -->
             <section class="col-12">
@@ -191,9 +200,9 @@ test();</code></pre>
                             - Expression → <code>expression</code><br>
                             - Arrow → <code>arrow</code>
                         </div>
-                        </div>
-                        </div>
-                        </section>
+                    </div>
+                    </div>
+                    </section>
 
             <!-- Exercice 4 et 5 : rallonge des exercices -->
             <div class="row gy-4 mt-4">
@@ -219,7 +228,7 @@ test();</code></pre>
 console.log(b);</code></pre>
                             <div class="mb-3">
                                 <label for="answer4" class="form-label">Votre réponse :</label>
-                                <input type="text" id="answer4" class="form-control" placeholder="ex : 2,SyntaxError">
+                                <input type="text" id="answer4" class="form-control" placeholder="">
                             </div>
                             <div class="d-flex gap-2">
                                 <button id="check4" class="btn btn-purple">Vérifier</button>
@@ -231,9 +240,9 @@ console.log(b);</code></pre>
                                 1 → <code>2</code> (var redéclaré OK)<br>
                                 2 → <strong>SyntaxError</strong> (let interdite)
                             </div>
-                            </div>
-                            </div>
-                            </section>
+                        </div>
+                        </div>
+                        </section>
                 <!-- Exercice 5 -->
                 <section class="col-12 col-lg-6">
                     <div class="card h-100 shadow-sm">
@@ -252,7 +261,7 @@ potion = { level: 10 };
 console.log(potion.level);</code></pre>
                             <div class="mb-3">
                                 <label for="answer5" class="form-label">Votre réponse :</label>
-                                <input type="text" id="answer5" class="form-control" placeholder="ex : 5,TypeError">
+                                <input type="text" id="answer5" class="form-control" placeholder="">
                             </div>
                             <div class="d-flex gap-2">
                                 <button id="check5" class="btn btn-purple">Vérifier</button>
@@ -264,17 +273,20 @@ console.log(potion.level);</code></pre>
                                 1 → <code>5</code> (mutation OK)<br>
                                 2 → <strong>TypeError</strong> (réassignation interdite)
                             </div>
-                            </div>
-                            </div>
-                            </section>
+                        </div>
+                        </div>
+                        </section>
             </div>
         </div>
     </main>
 
     <!-- Chargement Popper & Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<!-- 4. Scripts externes : Popper et Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
 
     <!-- SCRIPT : validation & reset centralisés -->
     <script>
