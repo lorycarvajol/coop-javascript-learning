@@ -52,4 +52,7 @@ document.querySelectorAll('#spellBook button').forEach(btn => {
     else if (spell === 'arrow')     result = castArrow();
     outSpells.textContent = result;
   });
+  document.getElementById("Buy")
+  console.log (document.getElementById("Buy"))
+
 });

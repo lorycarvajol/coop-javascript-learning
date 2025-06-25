@@ -55,7 +55,7 @@
     Navbar
   ────────────────────────────────────────────────────────────────────────────*/
   .navbar {
-    background: var(--purple);
+    background: #9be4244a;
   }
   
   .navbar-brand,
