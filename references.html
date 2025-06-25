@@ -47,7 +47,26 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="doc_manip.html">doc Manip variable</a>
                             </li>
-                            </ul>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Clair/obscur
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/clair-obscur1.html">Manip variable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/clair-obscur2.html"> exo Manip variable</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="/clair-obscur3.html"> exo Manip variable</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/clair-obscur4.html">doc Manip variable</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -64,11 +83,11 @@
             </p>
         </div>
     </header>
-    
+
     <!-- CONTENU PRINCIPAL -->
     <main class="container mb-5">
         <article class="bg-white p-4 rounded shadow-sm">
-    
+
             <!-- 1. Qu’est-ce qu’une variable ? -->
             <section class="mb-5">
                 <h2 class="h3 text-purple-dark mb-3">1. Qu'est-ce qu'une variable ?</h2>
@@ -76,7 +95,7 @@
                 <pre class="code-snippet"><code>let prenom = "Hector";</code></pre>
                 <p>On définit ici une variable <code>prenom</code> contenant la chaîne <strong>"Hector"</strong>.</p>
             </section>
-    
+
             <!-- 2. var vs let vs const -->
             <section class="mb-5">
                 <h2 class="h3 text-purple-dark mb-3">2. var vs let vs const</h2>
@@ -118,7 +137,7 @@
             c = 2; // TypeError
                     </code></pre>
             </section>
-    
+
             <!-- 3. Hoisting -->
             <section class="mb-5">
                 <h2 class="h3 text-purple-dark mb-3">3. Hoisting</h2>
@@ -159,7 +178,7 @@ return n + n;
 // Arrow
 const cube = n => n ** 3;
 </code></pre>
-</section>
+            </section>
 
             <!-- 5. Exercice interactif : Ton prénom -->
             <section class="mb-5">
@@ -171,8 +190,8 @@ const cube = n => n ** 3;
                     </div>
                     <button id="btnPrenom" class="btn btn-purple mb-2">Dire bonjour</button>
                     <div id="bonjourResult" class="mt-2"></div>
-                    </div>
-                    </section>
+                </div>
+                </section>
 
             <!-- 6. Exercice interactif : Année de naissance -->
             <section>
@@ -184,13 +203,13 @@ const cube = n => n ** 3;
                     </div>
                     <button id="btnAge" class="btn btn-purple mb-2">Calculer année de naissance</button>
                     <div id="naissanceResult" class="mt-2"></div>
-                    </div>
-                    </section>
+                </div>
+                </section>
 
         </article>
-        </main>
-        
-        <!-- Popper & Bootstrap JS -->
+    </main>
+    
+    <!-- Popper & Bootstrap JS -->
     <!-- 4. Scripts externes : Popper et Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         crossorigin="anonymous"></script>
@@ -200,10 +219,10 @@ const cube = n => n ** 3;
 
     <!-- SCRIPT : exercices interactifs -->
     <script>
-                    // Exercice 5 : direBonjour
-                    document.getElementById('btnPrenom').addEventListener('click', () => {
-                        const prenom = document.getElementById('prenomInput').value.trim();
-                        const cible = document.getElementById('bonjourResult');
+            // Exercice 5 : direBonjour
+            document.getElementById('btnPrenom').addEventListener('click', () => {
+                const prenom = document.getElementById('prenomInput').value.trim();
+                const cible = document.getElementById('bonjourResult');
             if (!prenom) {
                 cible.textContent = 'Veuillez entrer un prénom.';
                 cible.className = 'text-danger';
@@ -211,12 +230,12 @@ const cube = n => n ** 3;
                 cible.textContent = `Bonjour ${prenom} ! Bienvenue.`;
                 cible.className = 'text-dark';
             }
-                });
+        });
 
-                    // Exercice 6 : calculerNaissance
-                    document.getElementById('btnAge').addEventListener('click', () => {
-                        const ageVal = document.getElementById('ageInput').value;
-                        const cible = document.getElementById('naissanceResult');
+            // Exercice 6 : calculerNaissance
+            document.getElementById('btnAge').addEventListener('click', () => {
+                const ageVal = document.getElementById('ageInput').value;
+                const cible = document.getElementById('naissanceResult');
             const age = parseInt(ageVal, 10);
             if (isNaN(age) || age < 0) {
                 cible.textContent = 'Veuillez entrer un âge valide.';
@@ -226,7 +245,7 @@ const cube = n => n ** 3;
                 cible.textContent = `Tu es né(e) en ${year}.`;
                 cible.className = 'text-dark';
             }
-                });
+        });
     </script>
 
 </body>
