@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ateliers JavaScript : Thèmes Clair/Obscur avec Fonctionnalités Variées</title>
+      <!-- 1. Bootstrap CSS (CDN) -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+      <!-- 2. Google Font : Roboto -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <!-- 3. Feuille de styles globale -->
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4 fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+              <li class="nav-item"><a class="nav-link" href="tutoriels.html">Jeux & Exercices</a></li>
+              <li class="nav-item"><a class="nav-link " href="references.html">Références</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Manip variable
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="test.html">Manip variable</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="exo_manip.html"> exo Manip variable</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="doc_manip.html">doc Manip variable</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Clair/obscur
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/clair-obscur1.html">Manip variable</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/clair-obscur2.html"> exo Manip variable</a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="/clair-obscur3.html"> exo Manip variable</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/clair-obscur4.html">doc Manip variable</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+  <h1>Ateliers JavaScript pour Débutants : Thèmes Clair/Obscur</h1>
+
+  
+  <!-- Atelier 4 -->
+  <h2>Atelier 4 : Thème Clair/Obscur avec Bouton Coulissant</h2>
+  <p><strong>Objectif :</strong> Créer un bouton coulissant (toggle switch) stylisé pour basculer entre thème clair et
+    sombre.</p>
+  
+  <pre>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier 4 : Thème avec Toggle</title>
+  <style>
+    body { transition: all 0.3s; padding: 20px; }
+    .light { background-color: #fff; color: #000; }
+    .dark { background-color: #222; color: #fff; }
+    .switch { position: relative; display: inline-block; width: 60px; height: 34px; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #ccc; transition: 0.4s; border-radius: 34px; }
+    .slider:before { position: absolute; content: ""; height: 26px; width: 26px; left: 4px; bottom: 4px; background-color: white; transition: 0.4s; border-radius: 50%; }
+    input:checked + .slider { background-color: #2196F3; }
+    input:checked + .slider:before { transform: translateX(26px); }
+  </style>
+</head>
+<body class="light">
+  <h1>Page avec interrupteur</h1>
+  <label class="switch">
+    <input type="checkbox" onchange="toggleTheme(this)">
+    <span class="slider"></span>
+  </label>
+
+  <script>
+    function toggleTheme(checkbox) {
+      const body = document.body;
+      body.classList.toggle('light');
+      body.classList.toggle('dark');
+    }
+  </script>
+      <!-- 4. Scripts externes : Popper et Bootstrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
